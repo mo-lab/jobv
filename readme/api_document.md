@@ -14,6 +14,7 @@
 <div dir=rtl>
 یک درخواست ازنوع GET به همراه پارامتر phone و مقدار از نوع string ارسال می شود و نتیجه در کنسول چاپ شده و به شما نمایش داده میشود
 </div >
+
 - **Request:** *http://localhost:8080/otp/send?phone=1234*
 - **Response:** *OTP sent successfully*
 - **Handler:** `SendOTPHandler`
@@ -50,7 +51,7 @@
 - **Headers:** 
 - **Description:** 
 <div dir=rtl>
-ق یک لیست از کاربران را با فرمت json دریافت میکنیم
+ یک لیست از کاربران را با فرمت json دریافت میکنیم
 </div>
 
 - **Response:** 
@@ -65,10 +66,11 @@
 ```
 - **Handler:** `GetUsersHandler`
 - **Params:**
-    --limit : 
-    --page :
+    ``limit`` 
+    ``page``
 <div dir=rtl>
- `page` شماره صفحه و `limit` تعداد کاربران دریافتی را مشخص میکند
+ ##page شماره صفحه 
+ ##limit تعداد کاربران دریافتی را مشخص میکند
 </div>
 ---
 
