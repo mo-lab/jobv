@@ -65,8 +65,8 @@
 ```
 - **Handler:** `GetUsersHandler`
 - **Params:**
--limit : 
--page :
+    --limit : 
+    --page :
 <div dir=rtl>
  `page` شماره صفحه و `limit` تعداد کاربران دریافتی را مشخص میکند
 </div>
@@ -81,7 +81,9 @@
 ارسال یک درخواست GET به همراه گارامتر ها و دریافتی لیتی از کاربران با فرمت json
 </div>
 
-- **Request Example:** ```http://localhost:8080/users/search?phone=123456&page=2&limit=10```
+- **Request Example:** ```crul
+http://localhost:8080/users/search?phone=123456&page=2&limit=10
+```
 - **Response:** 
 ```json
 [
