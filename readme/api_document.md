@@ -134,10 +134,10 @@ http://localhost:8080/users/search?phone=123456&page=2&limit=10
 ]
 ```
 - **Handler:** `SearchUsersHandler`
- **Params:** 
+- **Params:** 
 
  <div dir=rtl>
  `page` شماره صفحه و `limit` تعداد کاربران دریافتی را مشخص میکند `phone`و `role` پارامتر های سرچ هستند
  </div>
- 
+
 ---
