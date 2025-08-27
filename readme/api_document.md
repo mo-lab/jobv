@@ -69,9 +69,11 @@
     ``limit`` 
     ``page``
 <div dir=rtl>
- ##page شماره صفحه 
- ##limit تعداد کاربران دریافتی را مشخص میکند
+ page
+ شماره صفحه 
+ limit تعداد کاربران دریافتی را مشخص میکند
 </div>
+
 ---
 
 ### 4. Search Users
@@ -83,7 +85,8 @@
 ارسال یک درخواست GET به همراه گارامتر ها و دریافتی لیتی از کاربران با فرمت json
 </div>
 
-- **Request Example:** ```crul
+- **Request Example:**
+ ```crul
 http://localhost:8080/users/search?phone=123456&page=2&limit=10
 ```
 - **Response:** 
@@ -98,8 +101,13 @@ http://localhost:8080/users/search?phone=123456&page=2&limit=10
 ```
 - **Handler:** `SearchUsersHandler`
  **Params:**
+     ``limit`` 
+    ``page``
+    ``role`` 
+    ``phone``
+
  <div dir=rtl>
-  `page` شماره صفحه و `limit` تعداد کاربران دریافتی را مشخص میکند `phone`و `role` پارامتر های سرچ هستند
+  `page` شماره صفحه و limit تعداد کاربران دریافتی را مشخص میکند phone و role پارامتر های سرچ هستند
   </div>
 ---
 
@@ -109,11 +117,20 @@ http://localhost:8080/users/search?phone=123456&page=2&limit=10
 - **Method:** `GET`
 - **Description:** 
 <div dir=rtl>
-میدلور jwt برای این اند پوینت فعال شده و با قرار دادن توکن دریافتی از اند پوینت `/verify`در هدر امکان دسترسی به آن امکان پذیر است
+میدلور jwt برای این اند پوینت فعال شده و با قرار دادن توکن دریافتی از اند پوینت /verify در هدر امکان دسترسی به آن امکان پذیر است
 </div>
 
-- **Request Header:** *"Authorization":  Bearer <YOUR_JWT_HERE>*
-- **Response:** *(example needed)*
+- **Request Header:** `"Authorization":  Bearer <YOUR_JWT_HERE>`
+- **Response:** 
+```json
+[
+    {
+        "id": "",
+        "phone": "1234",
+        "created_at": "2025-08-26T18:49:20.14Z"
+    }
+]
+```
 - **Handler:** `SearchUsersHandler`
  **Params:** 
  <div dir=rtl>
