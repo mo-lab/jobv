@@ -63,6 +63,7 @@
         "created_at": "2025-08-26T18:49:20.14Z"
     }
 ]
+
 ```
 - **Handler:** `GetUsersHandler`
 - **Params:**
@@ -100,7 +101,7 @@ http://localhost:8080/users/search?phone=123456&page=2&limit=10
 ]
 ```
 - **Handler:** `SearchUsersHandler`
- **Params:**
+- **Params:**
      ``limit`` 
     ``page``
     ``role`` 
@@ -109,6 +110,7 @@ http://localhost:8080/users/search?phone=123456&page=2&limit=10
  <div dir=rtl>
   `page` شماره صفحه و limit تعداد کاربران دریافتی را مشخص میکند phone و role پارامتر های سرچ هستند
   </div>
+
 ---
 
 ### 5. Protected Search Users
@@ -133,7 +135,9 @@ http://localhost:8080/users/search?phone=123456&page=2&limit=10
 ```
 - **Handler:** `SearchUsersHandler`
  **Params:** 
+
  <div dir=rtl>
  `page` شماره صفحه و `limit` تعداد کاربران دریافتی را مشخص میکند `phone`و `role` پارامتر های سرچ هستند
  </div>
+ 
 ---
