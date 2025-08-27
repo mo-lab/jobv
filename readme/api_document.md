@@ -27,11 +27,18 @@
 - **Description:**
 <div dir=rtl>
  کد نمایش داده شده به همراه تلفن با فرمت json به این اند پوینت ارسال شده و مقدار توکن jwt در پاسخ با فرمت json برگشت داده میشود
+</div>
 
-- **Request Body:** `{"phone":"1234","code":"99999"}`
-- **Response:** `{
+- **Request Body:** 
+```json
+{"phone":"1234","code":"99999"}
+```
+- **Response:** 
+```json
+{
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTYyNTA0NjUsInJvbGUiOiJ1c2VyIiwidWlkIjoiIn0.HgBTZKf9IixHmSpnlyFSOE4M5FJ7Rv-JmLMWDTwIVGY"
-}`
+}
+```
 - **Handler:** `VerifyOTPHandler`
 
 ---
@@ -44,6 +51,7 @@
 - **Description:** 
 <div dir=rtl>
 ق یک لیست از کاربران را با فرمت json دریافت میکنیم
+</div>
 
 - **Response:** 
 ```json
@@ -73,15 +81,17 @@
 ارسال یک درخواست GET به همراه گارامتر ها و دریافتی لیتی از کاربران با فرمت json
 </div>
 
-- **Request Example:** *(http://localhost:8080/users/search?phone=123456&page=2&limit=10)*
+- **Request Example:** ```http://localhost:8080/users/search?phone=123456&page=2&limit=10```
 - **Response:** 
-*[
+```json
+[
     {
         "id": "68aee7ca1328cf7d00b72cf3",
         "phone": "123456",
         "created_at": "0001-01-01T00:00:00Z"
     }
-]*
+]
+```
 - **Handler:** `SearchUsersHandler`
  **Params:**
  <div dir=rtl>
@@ -97,8 +107,12 @@
 <div dir=rtl>
 میدلور jwt برای این اند پوینت فعال شده و با قرار دادن توکن دریافتی از اند پوینت `/verify`در هدر امکان دسترسی به آن امکان پذیر است
 </div>
+
 - **Request Header:** *"Authorization":  Bearer <YOUR_JWT_HERE>*
 - **Response:** *(example needed)*
 - **Handler:** `SearchUsersHandler`
- **Params:** `page` شماره صفحه و `limit` تعداد کاربران دریافتی را مشخص میکند `phone`و `role` پارامتر های سرچ هستند
+ **Params:** 
+ <div dir=rtl>
+ `page` شماره صفحه و `limit` تعداد کاربران دریافتی را مشخص میکند `phone`و `role` پارامتر های سرچ هستند
+ </div>
 ---
